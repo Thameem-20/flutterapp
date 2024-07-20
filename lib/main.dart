@@ -27,25 +27,30 @@ class MyApp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: Icon(Icons.logout),)
           ],
         ),
-        body: Column(
+        body: ListView(
+          scrollDirection: Axis.horizontal,
           children: [
           
           //box1
-          Expanded(child: Container(
+          Container(
+            width: 350,
             color: Colors.deepPurple,
 
-          )
           ),
           //box2
-          Expanded(child: Container(
+          Container(
+            width: 350,
             color: Colors.deepPurple[400],
-          )),
+
+          ),
            
           //box3
        
-          Expanded(child: Container(
+          Container(
+            width: 350,
             color: Colors.deepPurple[200],
-          ))
+
+          ),
         ],
         ),
         ),
