@@ -3,6 +3,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
         appBar: AppBar(
           backgroundColor: Colors.deepPurple,
           title: Text("My Appbar"),
@@ -27,34 +27,33 @@ class MyApp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: Icon(Icons.logout),)
           ],
         ),
-        body: Center(
-          child: Container(
-          height: 300,
-          width: 300,
-          decoration: BoxDecoration(
-            color: Colors.deepPurple,
-            borderRadius: BorderRadius.circular(20)
-          ),
-          padding: EdgeInsets.all(25),
-          // child: Text(
-          //   "Thameem",
-          //   style: TextStyle(
-          //     color: Colors.white,
-          //     fontSize: 25,
-          //     fontWeight: FontWeight.bold,
-          //   ),
-          //   ),
-
-          child: Icon(
-            Icons.favorite,
-            color: Colors.white,
-            size:65,
-          )
+        body: Column(
           
+          children: [
+          
+          //box1
+          Container(
+            height: 200,
+            width: 200,
+            color: Colors.deepPurple,
+          ),
+
+          //box2
+            Container(
+            height: 100,
+            width: 100,
+            color: Colors.deepPurple[400],
+          ),
+          //box3
+            Container(
+            height: 50,
+            width: 50,
+            color: Colors.deepPurple[200],
           )
+        ],
         ),
-      ),
-    );
+        ),
+      );
     
   }
 }
