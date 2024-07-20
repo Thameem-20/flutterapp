@@ -28,28 +28,24 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: Column(
-          
           children: [
           
           //box1
-          Container(
-            height: 200,
-            width: 200,
+          Expanded(child: Container(
             color: Colors.deepPurple,
-          ),
 
-          //box2
-            Container(
-            height: 100,
-            width: 100,
-            color: Colors.deepPurple[400],
-          ),
-          //box3
-            Container(
-            height: 50,
-            width: 50,
-            color: Colors.deepPurple[200],
           )
+          ),
+          //box2
+          Expanded(child: Container(
+            color: Colors.deepPurple[400],
+          )),
+           
+          //box3
+       
+          Expanded(child: Container(
+            color: Colors.deepPurple[200],
+          ))
         ],
         ),
         ),
