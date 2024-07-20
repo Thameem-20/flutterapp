@@ -6,13 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
   
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
+  List names = ["thameem", "mausooq", "raaz"];
 
   @override
   Widget build(BuildContext context) {
@@ -27,32 +28,13 @@ class MyApp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: Icon(Icons.logout),)
           ],
         ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(names[index]),
+          ),
           
-          //box1
-          Container(
-            width: 350,
-            color: Colors.deepPurple,
-
-          ),
-          //box2
-          Container(
-            width: 350,
-            color: Colors.deepPurple[400],
-
-          ),
-           
-          //box3
-       
-          Container(
-            width: 350,
-            color: Colors.deepPurple[200],
-
-          ),
-        ],
-        ),
+        )
         ),
       );
     
